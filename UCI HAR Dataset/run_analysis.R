@@ -57,7 +57,7 @@ run_analysis <- function() {
         merging.labelled <- cbind(all.labels.activity, merge.tables("train/subject_train.txt" , "test/subject_test.txt", "subject"), subset.data)
         
         
-        # PFrom the data set in step 4, creates a second, independent tidy data set with 
+        # From the data set in previous step, creates a second, independent tidy data set with 
         # the average of each variable for each activity and each subject.
         
         summarized.table <- merging.labelled %>% group_by(activity, subject) %>%  summarise_each(funs(mean(.)))
